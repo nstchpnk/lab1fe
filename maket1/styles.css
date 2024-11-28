@@ -1,11 +1,9 @@
-/* Підключення шрифтів Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap');
 
-/* Загальні стилі */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* Змінили шрифт на Open Sans */
+    font-family: 'Open Sans', sans-serif;
     background: linear-gradient(to bottom right, #f0f2f5, #e6e9f0);
 }
 
@@ -14,7 +12,6 @@ body {
     margin: 0 auto;
 }
 
-/* Хедер */
 .header {
     display: flex;
     justify-content: space-between;
@@ -26,24 +23,15 @@ body {
     margin-bottom: 10px;
 }
 
-/* Логотип */
 .logo {
-    font-size: 30px;
+    border: 2px solid #fff;
+    padding: 12px 35px;
     font-weight: bold;
-    padding: 5px 15px;
-    background: linear-gradient(45deg, #70a1d7, #95a5b8); /* Блакитно-сірий градієнт */
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Тінь для тексту */
-    transition: transform 0.3s ease;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-left: 20px;
 }
 
-
-.logo:hover {
-    transform: scale(1.05); /* Збільшення при наведенні */
-}
-
-/* Пошуковий контейнер */
 .search-container {
     display: flex;
     align-items: center;
@@ -52,37 +40,34 @@ body {
 .search-container input {
     padding: 10px;
     width: 280px;
-    border: 2px solid #3498db;
-    border-radius: 25px;
+    border: 2px solid #87afc9;
+    border-radius: 5px;
     background-color: #fff;
     color: #34495e;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif; /* Шрифт для інпутів */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
 }
 
 .search-container input:focus {
-    border-color: #3498db;
+    border-color: #87afc9;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
 }
 
 .search-container button {
     padding: 10px 15px;
-    background-color: #3498db;
+    background-color: #87afc9;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     color: white;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    transition: background-color 0.3s ease;
 }
 
 .search-container button:hover {
     background-color: #2980b9;
 }
 
-/* Навігація секцій */
 .section-nav {
     background-color: #34495e;
     border-radius: 8px;
@@ -103,7 +88,7 @@ body {
     padding: 12px 25px;
     cursor: pointer;
     color: #fff;
-    font-family: 'Open Sans', sans-serif; /* Шрифт для навігаційних елементів */
+    font-family: 'Open Sans', sans-serif;
     transition: background-color 0.3s;
 }
 
@@ -111,14 +96,12 @@ body {
     background-color: #2c3e50;
 }
 
-/* Основний вміст */
 .main-wrapper {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-/* Ліва навігація */
 .left-nav {
     flex: 0 0 200px;
     background-color: #fff;
@@ -137,14 +120,13 @@ body {
     padding: 10px 0;
     cursor: pointer;
     transition: color 0.3s;
-    font-family: 'Open Sans', sans-serif; /* Шрифт для ліва навігація */
+    font-family: 'Open Sans', sans-serif;
 }
 
 .left-nav li:hover {
     color: #3498db;
 }
 
-/* Центральний контент */
 .content {
     flex: 1;
     display: flex;
@@ -157,28 +139,26 @@ body {
     border-radius: 8px;
     padding: 5% 20%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 350px; /* Обмеження ширини картинки */
-    margin: 0 auto; /* Центрування вмісту */
+    max-width: 350px;
+    margin: 0 auto;
 }
 
-/* Заголовки картин */
 .content-box h3 {
     margin: 10px 0;
     color: #2c3e50;
     text-align: center;
     font-size: 22px;
     font-weight: 600;
-    letter-spacing: 1px; /* Додає простір між літерами */
+    letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Текст опису картин */
 .content-box p {
     color: #34495e;
     line-height: 1.6;
     text-align: center;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif; /* Шрифт для описів картин */
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 15px;
 }
 
@@ -192,10 +172,9 @@ body {
 }
 
 .content-box:hover .cover {
-    transform: scale(1.02); /* Збільшення зображення при наведенні */
+    transform: scale(1.02);
 }
 
-/* Права панель */
 .sidebar {
     flex: 0 0 250px;
     background-color: #fff;
@@ -213,7 +192,7 @@ body {
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 2px solid #3498db;
-    font-family: 'Open Sans', sans-serif; /* Шрифт для заголовків правої панелі */
+    font-family: 'Open Sans', sans-serif;
 }
 
 .sidebar-box ul {
@@ -233,7 +212,6 @@ body {
     color: #3498db;
 }
 
-/* Адаптивність */
 @media (max-width: 768px) {
     .main-wrapper {
         flex-direction: column;
