@@ -9,7 +9,7 @@
 <body>
     <div class="page-container">
         <header class="header">
-          <div class="logo" style="font-size: 32px; color: #ffffff;">Art Gallery</div>
+          <div class="logo" >ART GALLERY</div>
           <div class="search-container">
             <input type="text" class="search-input" placeholder="Пошук картин..." style="font-size: 18px;">
             <div class="search-icon" style="font-size: 22px; color: #ffffff;">🔍</div>
@@ -18,22 +18,14 @@
         </header>
 
         <div class="main-container">
-            <nav class="sidebar">
-              <h2 class="catalog-title" style="font-family: 'Arial', sans-serif; font-size: 24px; color: #2a4d69;">Каталог</h2>
-              <ul class="category-list" style="font-family: 'Georgia', serif; font-size: 18px; color: #3498db;">
-                <li class="category-item"><a href="/category/landscapes" style="text-decoration: none;">Пейзажі</a></li>
-                <li class="category-item"><a href="/category/abstracts" style="text-decoration: none;">Абстракції</a></li>
-                <li class="category-item"><a href="/category/portraits" style="text-decoration: none;">Портрети</a></li>
-              </ul>
+            <nav class="left-nav">
+                <ul>
+                    <li>КАТАЛОГ</li>
+                    <li>Пейзажі</li>
+                    <li>Абстракції</li>
+                    <li>Портрети</li>
+                </ul>
             </nav>
-<!--            <aside class="sidebar">-->
-<!--                <h2 class="catalog-title">Каталог</h2>-->
-<!--                <ul class="category-list">-->
-<!--                    <li class="category-item"><a href="/category/landscapes">Пейзажі</a></li>-->
-<!--                    <li class="category-item"><a href="/category/abstracts">Абстракції</a></li>-->
-<!--                    <li class="category-item"><a href="/category/portraits">Портрети</a></li>-->
-<!--                </ul>-->
-<!--            </aside>-->
 
             <main class="gallery">
                 <form class="artwork-card" action="/cart/add" method="post">
