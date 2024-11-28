@@ -1,7 +1,6 @@
 :root {
     --primary-color: #e0e0e0;
     --secondary-color: #bdc3c7;
-    --accent-color: #e74c3c;
     --border-color: #34495e;
     --background-color: #34495e;
     --spacing-unit: 1rem;
@@ -40,7 +39,6 @@ body {
     width: 100%;
 }
 
-/* Header Styles */
 .site-header {
     background-color: transparent;
     padding: 0;
@@ -67,7 +65,6 @@ body {
     text-align: center;
 }
 
-/* Main Content Layout */
 .site-main {
     flex: 1;
     background-color: #2c3e50;
@@ -80,8 +77,10 @@ body {
     gap: calc(var(--spacing-unit) * 3);
 }
 
-/* Post Card Styles */
 .post-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--background-color);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -90,12 +89,35 @@ body {
     transition: all var(--transition-duration) ease-in-out;
 }
 
+
 .post-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
+.post-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    margin-left: 15px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .post-content {
+    flex: 1;
     padding: calc(var(--spacing-unit) * 2);
 }
 
@@ -123,7 +145,6 @@ body {
     line-height: 1.8;
 }
 
-/* Sidebar Styles */
 .sidebar {
     position: sticky;
     top: var(--spacing-unit);
@@ -145,7 +166,6 @@ body {
     margin-bottom: var(--spacing-unit);
     color: #fff;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent-color);
     display: inline-block;
 }
 
@@ -155,7 +175,6 @@ body {
     line-height: 1.7;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .content-grid {
         gap: calc(var(--spacing-unit) * 2);
@@ -176,7 +195,19 @@ body {
     }
 
     .post-card {
-        margin-bottom: var(--spacing-unit);
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-image {
+        flex: 0 0 auto;
+        max-width: 100%;
+        margin: 0 0 var(--spacing-unit) 0;
+    }
+
+    .image-placeholder {
+        aspect-ratio: auto;
+        width: 100%;
     }
 
     .widget {
